@@ -10,7 +10,7 @@ namespace snake
     {
         static void Main(string[] args)
         {
-
+            int x = 0;
         }
     }
 }
