@@ -27,13 +27,13 @@ namespace snake
             // p1.x = 1;
             // p1.y = 3;
             // p1.sym = '*';
-            p1.Drow();
+            //p1.Drow();
 
             Point p2 = new Point(4, 5, '#');
             // p2.x = 4;
             // p2.y = 5;
             // p2.sym = '#';
-            p2.Drow();
+            //p2.Drow();
 
             List<int> numList = new List<int>();
 
@@ -54,6 +54,13 @@ namespace snake
 
             pList.Add(p1);
             pList.Add(p2);
+
+            //foreach(Point i in pList)
+            //{
+                //i.Drow();
+            //}
+
+            pList[0].Drow();
 
             Console.ReadLine();
         }
