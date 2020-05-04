@@ -10,3 +10,4 @@ C:\Users\SEN\Desktop\ООП\Snake\snake\snake\obj\Debug\snake.pdb
 C:\Users\SEN\Desktop\ООП\Snake\snake\snake\bin\Debug\snake.exe.config
 C:\Users\SEN\Desktop\ООП\Snake\snake\snake\bin\Debug\snake.exe
 C:\Users\SEN\Desktop\ООП\Snake\snake\snake\bin\Debug\snake.pdb
+C:\Users\SEN\Desktop\ООП\Snake\snake\snake\obj\Debug\snake.csproj.CoreCompileInputs.cache
