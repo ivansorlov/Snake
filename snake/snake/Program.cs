@@ -18,10 +18,13 @@ namespace snake
             
 
             HorizontalLine line = new HorizontalLine(5, 23, 3, '.');
-            line.Drow();
+            //line.Drow();
 
             VerticalLine vline = new VerticalLine(5, 3, 23, '.');
-            vline.Drow();
+            //vline.Drow();
+
+            Snake snake = new Snake(p2, 4, Direction.RIGHT);
+            snake.Drow();
 
             Console.ReadLine();
         }
