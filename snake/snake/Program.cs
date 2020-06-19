@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace snake
 {
@@ -25,6 +26,12 @@ namespace snake
 
             Snake snake = new Snake(p2, 4, Direction.RIGHT);
             snake.Drow();
+
+            for (int i = 0; i < 20; i++)
+            {
+                snake.Move();
+                Thread.Sleep(300);
+            }
 
             Console.ReadLine();
         }
