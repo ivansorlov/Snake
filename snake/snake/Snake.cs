@@ -10,6 +10,8 @@ namespace snake
     {
         Direction direction;
 
+        public int SpeedSnake = 100;
+
         public Snake(Point tail, int length, Direction _direction)
         {
             direction = _direction;
@@ -40,6 +42,30 @@ namespace snake
             Point nextPoint = new Point(head);
             nextPoint.Move(1, direction);
             return nextPoint;
+        }
+
+        public void HandleKey(ConsoleKey key)
+        {
+            if(key == ConsoleKey.LeftArrow)
+            {
+                direction = Direction.LEFT;
+                SpeedSnake = 100;
+            }
+            else if (key == ConsoleKey.RightArrow)
+            {
+                direction = Direction.RIGHT;
+                SpeedSnake = 100;
+            }
+            else if (key == ConsoleKey.UpArrow)
+            {
+                direction = Direction.UP;
+                SpeedSnake = 140;
+            }
+            else if (key == ConsoleKey.DownArrow)
+            {
+                direction = Direction.DOWN;
+                SpeedSnake = 140;
+            }
         }
     }
 }

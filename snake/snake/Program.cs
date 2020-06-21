@@ -12,25 +12,40 @@ namespace snake
         static void Main(string[] args)
         {
 
-            Point p1 = new Point(1, 3, '*');
-            
+            //Point p1 = new Point(1, 3, '*');
+
 
             Point p2 = new Point(4, 5, '#');
+
+            Console.SetBufferSize(80, 25);
             
 
-            HorizontalLine line = new HorizontalLine(5, 23, 3, '.');
-            //line.Drow();
+            HorizontalLine gline  = new HorizontalLine(0, 78, 0, '.');
+            HorizontalLine gline2 = new HorizontalLine(0, 78, 24, '.');
+            
+            VerticalLine vline  = new VerticalLine(0, 0, 24, '.');
+            VerticalLine vline2 = new VerticalLine(78, 0, 24, '.');
 
-            VerticalLine vline = new VerticalLine(5, 3, 23, '.');
-            //vline.Drow();
+            gline.Drow();
+            gline2.Drow();
+            vline.Drow();
+            vline2.Drow();
 
             Snake snake = new Snake(p2, 4, Direction.RIGHT);
             snake.Drow();
 
-            for (int i = 0; i < 20; i++)
+            
+
+            while (true)
             {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+
+                Thread.Sleep(snake.SpeedSnake);
                 snake.Move();
-                Thread.Sleep(300);
             }
 
             Console.ReadLine();
